@@ -1,0 +1,103 @@
+# ============================================================
+#  social_rec .gitignore  —  소스코드만 push, 데이터/모델/venv 제외
+# ============================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+develop-eggs/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---------- 가상환경 ----------
+venv/
+.venv/
+env/
+ENV/
+/DANSER-WWW-19/danser/
+/GraphRec-WWW19/graphrec/
+/GDSRec/gds_venv/
+
+# ---------- 데이터셋 / 모델 가중치 / 로그 / 실행결과 (대용량·재생성 가능) ----------
+data/
+datasets/
+dataset/
+Model/
+saved_models/
+checkpoint/
+checkpoints/
+History/
+processed/
+runs/
+wandb/
+logs/
+log/
+nohup.out
+*.out
+*.log
+*.his
+__MACOSX/
+
+# ---------- TensorFlow 체크포인트 ----------
+/DANSER-WWW-19/model/
+*.ckpt
+*.ckpt.*
+*.meta
+*.index
+*.data-[0-9]*-of-[0-9]*
+
+# ---------- 대용량 / 바이너리 파일 ----------
+*.csv
+*.tsv
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.mat
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.parquet
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.7z
+*.rar
+*.bin
+*.dat
+*.sav
+*.arff
+*.wav
+*.exe
+*.run
+*.so
+*.pdf
+
+# ---------- OS / 에디터 ----------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# ---------- 이 저장소에 올리지 않는 다른 모델 폴더 ----------
+/DGRec-pytorch/
+/dist/
+/diffnet/
+/GraphRec-WWW19_modified/
+/papers&reference/
+/RecDiff/
+/RSAlgorithms/
+/TrustSVD/
+/TrustSVD_pytorch/

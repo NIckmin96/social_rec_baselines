@@ -1,0 +1,39 @@
+[project]
+name = "kcgn"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "sdsf1225",email = "sdsf1225@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy (<1.20.0)",
+    "dgl (==0.5.3)",
+    "dgl-cu110",
+    "torch",
+    "torchvision",
+    "torchaudio"
+]
+
+[tool.poetry.dependencies]
+dgl-cu110 = {version = "0.5.3"}
+#dgl = { version = "0.5.3", source = "dgl-cu110" }
+torch = { version = "1.7.1+cu110", source = "torch-cu110" }
+torchvision = { version = "0.8.2+cu110", source = "torch-cu110" }
+torchaudio = { version = "0.7.2", source = "torch-cu110" }
+
+[[tool.poetry.source]]
+name = "dgl-cu110"
+url = "https://data.dgl.ai/wheels/repo.html"
+priority = "supplemental"
+
+
+[[tool.poetry.source]]
+name = "torch-cu110"
+url = "https://download.pytorch.org/whl/torch_stable.html"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
